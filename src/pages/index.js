@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import SearchBar from '@theme/SearchBar';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -14,14 +14,10 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">
-          Ejemplo mínimo de biblioteca: Java Hello World.
+          Busca directamente un ejemplo de la biblioteca.
         </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/java-hello">
-            Ver ejemplo Java Hello
-          </Link>
+        <div className={styles.searchWrapper}>
+          <SearchBar />
         </div>
       </div>
     </header>

@@ -106,7 +106,7 @@ const config = {
             items: [
               {
                 label: 'Java Hello',
-                to: '/docs/java-hello',
+                to: '/docs/java/language/java-hello',
               },
             ],
           },
