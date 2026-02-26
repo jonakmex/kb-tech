@@ -89,7 +89,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Java Hello',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/jonakmex/kb-tech',
