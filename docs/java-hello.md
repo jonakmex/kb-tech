@@ -1,0 +1,51 @@
+---
+sidebar_position: 2
+---
+
+# Java Hello World
+
+Este ejemplo muestra el clásico **"Hello, World!"** en Java, sin usar ninguna herramienta de build (como Maven o Gradle).  
+Es útil para comprobar que tu instalación de Java funciona correctamente y para tener el ejemplo más simple posible.
+
+## Código de ejemplo
+
+El archivo `HelloWorld.java` se encuentra en `examples/java-hello`:
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+      System.out.println("Hello, World!");
+    }
+  }
+```
+
+Puntos clave:
+
+- **Clase pública**: `HelloWorld` es la clase principal del programa.
+- **Método `main`**: `public static void main(String[] args)` es el punto de entrada de la aplicación.
+- **Salida por consola**: `System.out.println("Hello, World!");` imprime el texto en la terminal.
+
+## Cómo ejecutarlo
+
+Requisitos: **JDK 17+ (o 11+)** instalado y disponible en tu `PATH`.
+
+En una terminal:
+
+```bash
+cd examples/java-hello
+javac HelloWorld.java
+java HelloWorld
+```
+
+Si todo está correcto, deberías ver en la consola:
+
+```text
+Hello, World!
+```
+
+## Siguientes pasos
+
+- Modifica el mensaje de salida para imprimir tu nombre.
+- Añade más `System.out.println` para practicar.
+- Crea una segunda clase y llama a un método desde `main` para entender cómo se organiza el código en varios archivos.
+
