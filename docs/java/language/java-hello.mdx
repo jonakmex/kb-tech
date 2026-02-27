@@ -1,37 +1,50 @@
 ---
 sidebar_position: 1
+title: Java Hello World Reference
+description: Quick reference for compiling and running Hello World in plain Java.
 ---
 
 import ExampleDownloadSection from '@site/src/components/ExampleDownloadSection';
 
-# Java Hello World
+# Java Hello World Reference
 
-Este ejemplo muestra el clásico **"Hello, World!"** en Java, sin usar ninguna herramienta de build (como Maven o Gradle).  
-Es útil para comprobar que tu instalación de Java funciona correctamente y para tener el ejemplo más simple posible.
+## Summary
 
-## Código de ejemplo
+Minimal reference to compile and run a Java Hello World program without Maven or Gradle.
 
-El archivo `HelloWorld.java` se encuentra en `examples/java-hello`:
+## Syntax / CLI
+
+```bash
+javac HelloWorld.java
+java HelloWorld
+```
+
+## Parameters
+
+| Parameter | Type | Required | Description |
+| --- | --- | --- | --- |
+| `HelloWorld.java` | file | Yes | Java source file to compile |
+| `HelloWorld` | class | Yes | Compiled class name used by the JVM |
+
+## Example code
+
+File: `examples/java-hello/HelloWorld.java`
 
 ```java
 public class HelloWorld {
-    public static void main(String[] args) {
-      System.out.println("Hello, World!");
-    }
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
   }
+}
 ```
 
-Puntos clave:
+## Examples
 
-- **Clase pública**: `HelloWorld` es la clase principal del programa.
-- **Método `main`**: `public static void main(String[] args)` es el punto de entrada de la aplicación.
-- **Salida por consola**: `System.out.println("Hello, World!");` imprime el texto en la terminal.
+### Basic run
 
-## Cómo ejecutarlo
+Requirements: **JDK 17+ (or 11+)** installed and available in your `PATH`.
 
-Requisitos: **JDK 17+ (o 11+)** instalado y disponible en tu `PATH`.
-
-En una terminal, dentro del proyecto ya clonado:
+In a terminal, inside the cloned project:
 
 ```bash
 cd examples/java-hello
@@ -39,7 +52,7 @@ javac HelloWorld.java
 java HelloWorld
 ```
 
-Si todo está correcto, deberías ver en la consola:
+Expected output:
 
 ```text
 Hello, World!
@@ -47,9 +60,13 @@ Hello, World!
 
 <ExampleDownloadSection exampleDir="examples/java-hello" zipUrl="downloads/java-hello.zip" />
 
-## Siguientes pasos
+## Compatibility notes
 
-- Modifica el mensaje de salida para imprimir tu nombre.
-- Añade más `System.out.println` para practicar.
-- Crea una segunda clase y llama a un método desde `main` para entender cómo se organiza el código en varios archivos.
+- Works with JDK 11+ (tested with modern JDKs).
+- No build tool required.
+
+## Common errors
+
+- `javac: command not found`: Java is not installed or not in `PATH`.
+- `Could not find or load main class HelloWorld`: compile and run commands are being executed from the wrong directory.
 

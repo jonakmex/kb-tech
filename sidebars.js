@@ -19,34 +19,73 @@ const sidebars = {
     {
       type: 'category',
       label: 'Java',
+      link: {
+        type: 'generated-index',
+        title: 'Java',
+        description: 'Java language and framework examples.',
+      },
       items: [
         {
           type: 'category',
           label: 'Language',
+          items: ['java/language/java-hello'],
+        },
+        {
+          type: 'category',
+          label: 'Frameworks',
           items: [
-            'java/language/java-hello',
-            'java/language/java-polimorfismo',
+            {
+              type: 'category',
+              label: 'Spring',
+              link: {
+                type: 'generated-index',
+                title: 'Spring',
+                description: 'Spring ecosystem examples.',
+              },
+              items: [
+                {
+                  type: 'category',
+                  label: 'Spring Boot',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Spring Boot',
+                    description: 'Spring Boot examples.',
+                  },
+                  items: [],
+                },
+                {
+                  type: 'category',
+                  label: 'Spring JDBC Template',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Spring JDBC Template',
+                    description: 'Spring JDBC Template examples.',
+                  },
+                  items: [],
+                },
+                {
+                  type: 'category',
+                  label: 'Spring AI',
+                  link: {
+                    type: 'generated-index',
+                    title: 'Spring AI',
+                    description: 'Spring AI examples.',
+                  },
+                  items: [],
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Quarkus',
+              link: {
+                type: 'generated-index',
+                title: 'Quarkus',
+                description: 'Quarkus examples.',
+              },
+              items: [],
+            },
           ],
-        },
-        {
-          type: 'category',
-          label: 'Web',
-          link: {
-            type: 'generated-index',
-            title: 'Java Web',
-            description: 'Ejemplos de Java Web.',
-          },
-          items: [],
-        },
-        {
-          type: 'category',
-          label: 'API',
-          link: {
-            type: 'generated-index',
-            title: 'Java API',
-            description: 'Ejemplos de APIs en Java.',
-          },
-          items: [],
         },
       ],
     },
@@ -56,9 +95,24 @@ const sidebars = {
       link: {
         type: 'generated-index',
         title: 'Terminal',
-        description: 'Ejemplos de terminal y CLI.',
+        description: 'Terminal and CLI examples.',
       },
-      items: [],
+      items: [
+        {
+          type: 'category',
+          label: 'Linux',
+          items: ['terminal/linux/basic-commands'],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Templates',
+      items: [
+        'templates/tutorial-template',
+        'templates/reference-template',
+        'templates/troubleshooting-template',
+      ],
     },
     {
       type: 'category',
@@ -70,7 +124,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Azure',
-            description: 'Ejemplos de Azure.',
+            description: 'Azure examples.',
           },
           items: [],
         },
@@ -80,7 +134,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'AWS',
-            description: 'Ejemplos de AWS.',
+            description: 'AWS examples.',
           },
           items: [],
         },
@@ -90,7 +144,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'GCP',
-            description: 'Ejemplos de Google Cloud.',
+            description: 'Google Cloud examples.',
           },
           items: [],
         },
@@ -106,7 +160,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'Terraform',
-            description: 'Ejemplos de IaC con Terraform.',
+            description: 'IaC examples with Terraform.',
           },
           items: [],
         },
@@ -116,7 +170,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'CloudFormation',
-            description: 'Ejemplos de IaC con CloudFormation.',
+            description: 'IaC examples with CloudFormation.',
           },
           items: [],
         },

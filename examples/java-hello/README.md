@@ -1,7 +1,7 @@
-# Java Hello World (sin build tool)
+# Java Hello World (without build tool)
 
-## Ejecutar
-Requisitos: JDK 17+ (o 11+)
+## Run
+Requirements: JDK 17+ (or 11+)
 
 ```bash
 cd examples/java-hello

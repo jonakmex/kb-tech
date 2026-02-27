@@ -1,0 +1,80 @@
+---
+sidebar_position: 1
+title: Basic Linux commands
+description: Quick guide to navigate the terminal and work with files.
+slug: /terminal/linux/basic-commands
+---
+
+# Basic Linux commands
+
+## Goal
+
+Learn essential commands to navigate directories, inspect files, and run basic terminal tasks.
+
+## Prerequisites
+
+- Access to a Linux or macOS terminal.
+- Basic understanding of folders and files.
+
+## Quick context
+
+These commands are the starting point for server work, local development, and script automation.
+
+## Steps
+
+### 1) Locate yourself in the system
+
+```bash
+pwd
+ls -la
+```
+
+- `pwd` shows your current path.
+- `ls -la` lists files, including hidden ones and permissions.
+
+### 2) Navigate directories
+
+```bash
+cd /tmp
+cd ~
+cd -
+```
+
+- `cd /tmp` moves to a specific path.
+- `cd ~` returns to your home directory.
+- `cd -` goes back to the previous directory.
+
+### 3) Create, copy, move, and delete
+
+```bash
+mkdir demo-cli
+touch demo-cli/notes.txt
+cp demo-cli/notes.txt demo-cli/notes-copy.txt
+mv demo-cli/notes-copy.txt demo-cli/notes-final.txt
+rm demo-cli/notes-final.txt
+```
+
+### 4) Read and search content
+
+```bash
+echo "hello terminal" > demo-cli/notes.txt
+cat demo-cli/notes.txt
+grep "hello" demo-cli/notes.txt
+```
+
+Expected output:
+
+```text
+hello terminal
+```
+
+## Common errors
+
+- `No such file or directory`: the path does not exist or is misspelled.
+- `Permission denied`: you do not have enough permissions for the file or directory.
+
+## Next steps
+
+- Practice redirection with `>` and `>>`.
+- Learn pipes with `|` to chain commands.
+- Create a `.sh` script to automate repetitive tasks.

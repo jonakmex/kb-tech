@@ -1,26 +1,15 @@
-import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Heading from '@theme/Heading';
 import SearchBar from '@theme/SearchBar';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function HomepageSearch() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">
-          Busca directamente un ejemplo de la biblioteca.
-        </p>
-        <div className={styles.searchWrapper}>
-          <SearchBar />
-        </div>
+    <main className={styles.page}>
+      <div className={styles.searchWrapper}>
+        <SearchBar />
       </div>
-    </header>
+    </main>
   );
 }
 
@@ -30,8 +19,7 @@ export default function Home() {
     <Layout
       title={siteConfig.title}
       description="kb-tech Java Hello World example">
-      <HomepageHeader />
-      <main />
+      <HomepageSearch />
     </Layout>
   );
 }

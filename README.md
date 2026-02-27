@@ -2,6 +2,32 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## Knowledge base (KB Tech)
+
+This repository is set up to publish short, reusable technical examples.
+
+### Recommended structure
+
+- `docs/`: MDX documentation (tutorials, reference, troubleshooting).
+- `examples/`: runnable source code by topic.
+- `static/downloads/`: downloadable ZIP files for examples.
+
+### Included templates
+
+In `docs/templates` you already have three templates to speed up content creation:
+
+- `tutorial-template.mdx`
+- `reference-template.mdx`
+- `troubleshooting-template.mdx`
+
+### Suggested workflow per article
+
+1. Create the MDX document in `docs/<topic>/<subtopic>/...`.
+2. Add the runnable example in `examples/<example-name>/`.
+3. Publish the ZIP file in `static/downloads/`.
+4. Add the download section with `ExampleDownloadSection`.
+5. Register the page in `sidebars.js`.
+
 ## Installation
 
 ```bash
