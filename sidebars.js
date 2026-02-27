@@ -152,17 +152,42 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'IaC',
+      label: 'Infrastructure',
+      link: {
+        type: 'generated-index',
+        title: 'Infrastructure',
+        description: 'Infrastructure and IaC examples.',
+      },
       items: [
+        {
+          type: 'category',
+          label: 'Docker',
+          link: {
+            type: 'generated-index',
+            title: 'Docker',
+            description: 'Container and Docker workflow examples.',
+          },
+          items: ['infrastructure/docker/commands-reference'],
+        },
+        {
+          type: 'category',
+          label: 'Kubernetes',
+          link: {
+            type: 'generated-index',
+            title: 'Kubernetes',
+            description: 'Kubernetes and kubectl workflow examples.',
+          },
+          items: ['infrastructure/kubernetes/commands-reference'],
+        },
         {
           type: 'category',
           label: 'Terraform',
           link: {
             type: 'generated-index',
             title: 'Terraform',
-            description: 'IaC examples with Terraform.',
+            description: 'Infrastructure examples with Terraform.',
           },
-          items: [],
+          items: ['infrastructure/terraform/terraform-overview'],
         },
         {
           type: 'category',
@@ -170,7 +195,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
             title: 'CloudFormation',
-            description: 'IaC examples with CloudFormation.',
+            description: 'Infrastructure examples with CloudFormation.',
           },
           items: [],
         },

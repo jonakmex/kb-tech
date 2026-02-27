@@ -1,0 +1,52 @@
+---
+sidebar_position: 1
+title: Docker Commands Reference
+description: Quick reference for essential Docker CLI commands.
+---
+
+# Docker Commands Reference
+
+## Summary
+
+Quick reference page for the most common Docker commands used in local development workflows.
+
+## Core commands
+
+```bash
+docker --version
+docker images
+docker ps
+docker ps -a
+```
+
+## Image lifecycle
+
+```bash
+docker build -t my-app:latest .
+docker pull nginx:latest
+docker rmi my-app:latest
+```
+
+## Container lifecycle
+
+```bash
+docker run --name my-app -p 8080:80 my-app:latest
+docker stop my-app
+docker start my-app
+docker rm my-app
+```
+
+## Logs and inspection
+
+```bash
+docker logs -f my-app
+docker exec -it my-app sh
+docker inspect my-app
+```
+
+## Cleanup
+
+```bash
+docker system prune
+docker volume prune
+```

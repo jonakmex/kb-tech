@@ -1,0 +1,51 @@
+---
+sidebar_position: 1
+title: Kubernetes Commands Reference
+description: Quick reference for essential kubectl commands.
+---
+
+# Kubernetes Commands Reference
+
+## Summary
+
+Quick reference page for common `kubectl` commands used in day-to-day Kubernetes operations.
+
+## Cluster and context
+
+```bash
+kubectl config get-contexts
+kubectl config current-context
+kubectl cluster-info
+```
+
+## Workloads
+
+```bash
+kubectl get deployments
+kubectl get pods
+kubectl describe pod <pod-name>
+kubectl logs -f <pod-name>
+```
+
+## Services and networking
+
+```bash
+kubectl get svc
+kubectl get ingress
+kubectl port-forward svc/<service-name> 8080:80
+```
+
+## Apply and delete
+
+```bash
+kubectl apply -f k8s/
+kubectl delete -f k8s/
+```
+
+## Namespaces
+
+```bash
+kubectl get ns
+kubectl create ns demo
+kubectl config set-context --current --namespace=demo
+```
